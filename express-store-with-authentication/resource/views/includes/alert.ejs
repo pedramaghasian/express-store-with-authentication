@@ -1,0 +1,21 @@
+<% if(messages){ %>
+  <% if(messages['errors']){ %>
+    <% messages['errors'].forEach(err=>{ %> 
+      <!-- errors -->
+        <div class="alert alert-danger alert-dismissible fade show w-75 my-2 m-auto" role="alert">
+          <button type="button" class="btn-close p-1" data-bs-dismiss="alert" aria-label="Close"> </button>  
+            <%= err %> <br>
+        </div>
+      <!-- end errors -->
+    <% }) %> 
+  <% }else if(messages['success']){ %>  
+    <% messages['success'].forEach(suc=>{ %> 
+      <!-- errors -->
+        <div class="alert alert-success alert-dismissible fade show w-75 my-2 m-auto" role="alert">
+          <button type="button" class="btn-close p-1" data-bs-dismiss="alert" aria-label="Close"> </button>  
+            <%= suc %> <br>
+        </div>
+      <!-- end errors -->
+    <% }) %>
+  <% } %> 
+<% } %>  

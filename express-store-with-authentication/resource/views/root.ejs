@@ -1,0 +1,35 @@
+<%- include('./includes/header') -%>
+<%- include('./includes/alert',{messages}) -%> 
+
+<!-- Jumbotron -->
+
+<section class=" contact jumbotron text-center mt-5 w-75 m-auto">
+  <div
+    class="container d-flex flex-column justify-content-center align-items-center w-100"
+  >
+    <h1 class="jumbotron-heading my-4 w-100">
+      به بزرگترین فروشگاه ماشین ایران خوش آمدید
+    </h1>
+    <p class="lead text-muted w-75 mb-4">
+      به سایت ایران پلاک خیلی خوش آمدید. این سایت به طور تخصصی در زمینه خرید و
+      فروش خودرو فعالیت میکند بدین معنی که در هر نقطه ای از سرزمین بزرگمان ایران
+      زمین که باشید میتوانید به راحتی خودرویی خود را برای فروش آگهی کنید و یا
+      خودرویی مناسب برای خرید پیدا کنید میخوای قسمتهای مختلف این صفحه رو بهت
+      معرفی کنیم؟نیاز به راهنمایی داری؟
+    </p><hr>
+    <!-- <p>
+      <a href="#" class="btn btn-primary my-2">مشاوره فروش رایگان</a>
+      <a href="#" class="btn btn-secondary my-2">پیگیری سفارشات</a>
+    </p> -->
+    <h3>برای استفاده از تمام امکانات سایت لطفا ثبت نام کنید</h3>
+    <ul class="nav navbar-nav navbar-right w-100 m-auto">
+      <% if(!isLoggedIn){ %>
+        <li class="w-50 m-auto"><a class="btn btn-danger me-2 w-50" href="/auth/register">ثبت  نام</a></li>
+      <% }%>
+    </ul>
+  </div>
+</section>
+<!-- end of Jumbotron -->
+
+
+<%- include('./includes/footer') -%>
